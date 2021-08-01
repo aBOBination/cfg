@@ -1,0 +1,42 @@
+[user]
+	email = rmarks@nav.com
+	name = Bobby Marks
+[core]
+	excludesfile = /Users/robert-marks/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/robert-marks/.stCommitMsg
+[alias]
+	# Edit this file quickly
+	rcedit = "! /usr/bin/env vim ~/.gitconfig"
+
+	# Clean up in a hurry without reservation
+  bomb = "!git reset --hard && git clean -df"
+	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+
+	# Checkout
+	co = checkout
+	com = checkout master
+	cb = checkout -b
+
+	# Commit
+	c = commit
+	ca = commit -a
+	cm = commit -m
+	cam = commit -am
+
+	# Pull
+	pom = pull origin master
+
+	# Status/Logging
+  s = status
+	hist = log --graph --pretty=format:'%Cred%h%Creset %Cblue(%an)%Creset - %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+[push]
+	# Make `git push` automatically push relevant
+	default = current
