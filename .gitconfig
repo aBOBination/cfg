@@ -1,8 +1,8 @@
 [user]
-	email = rmarks@nav.com
+	email = robert.marks54@gmail.com
 	name = Bobby Marks
 [core]
-	excludesfile = /Users/robert-marks/.gitignore_global
+	excludesfile = /Users/bobby/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -10,7 +10,7 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/robert-marks/.stCommitMsg
+	template = /Users/bobby/.stCommitMsg
 [alias]
 	# Edit this file quickly
 	rcedit = "! /usr/bin/env vim ~/.gitconfig"
